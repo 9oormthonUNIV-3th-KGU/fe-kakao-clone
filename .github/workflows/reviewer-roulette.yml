@@ -5,13 +5,13 @@ on:
     types: [opened, ready_for_review, reopened]
 
 jobs:
-  example_assign_reviews:
+  assign_random_reviewers:
   
     runs-on: ubuntu-latest
     
     permissions: write-all
       
-    name: An example job to assign reviewers
+    name: Assign random reviewers to pull requests
     
     steps:
       - name: Checkout
