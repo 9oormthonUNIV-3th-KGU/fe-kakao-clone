@@ -12,8 +12,8 @@ const Button = styled.button`
   }
 `
 
-function App() {
+function Main() {
   return <Button>This my button component.</Button>
 }
 
-export default App
+export default Main
