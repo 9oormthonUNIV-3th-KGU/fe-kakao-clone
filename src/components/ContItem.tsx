@@ -11,10 +11,9 @@ interface TitItemProps {
 }
 
 const Cont = styled.div`
-  padding-botton: 196px;
+  padding-bottom: 196px;
   width: 612px;
-  height: 528px;
-  border-bottom: 1px solid #ededed;
+  height: auto;
 `
 
 const TitItem = styled.strong`
@@ -33,31 +32,32 @@ const TitItem = styled.strong`
 const TxtItem = styled.span`
   margin-top: 12px;
   width: 612px;
-  height: 80px;
+  height: auto;
   font-family: KakaoBig, 'Apple SD Gothic Neo', 'Malgun Gothic', '맑은 고딕',
     sans-serif;
   font-size: 30px;
   font-weight: 400;
-  height: 80px;
   line-height: 40px;
   display: block;
 `
 
 const DescItem = styled.p`
   margin-top: 24px;
+  margin-bottom: 0px;
   width: 612px;
-  height: 140px;
+  height: auto;
   color: rgb(102, 102, 102);
   font-family: KakaoSmall, 'Apple SD Gothic Neo', 'Malgun Gothic', '맑은 고딕',
     sans-serif;
   font-size: 16px;
   font-weight: 300;
-  height: 140px;
   line-height: 28px;
   display: block;
 `
 
 const WrapLogo = styled.a`
+  position: absolute;
+  bottom: 96px;
   width: 612px;
   height: 44px;
   cursor: auto;
@@ -66,7 +66,6 @@ const WrapLogo = styled.a`
     sans-serif;
   font-size: 14px;
   font-weight: 400;
-  height: 44px;
   left: 0px;
   line-height: 21px;
 `
@@ -91,7 +90,6 @@ function ContItem({ tit, txt, desc, img, link }: TitItemProps) {
               height: '44px',
               display: 'inline-flex',
               flexDirection: 'row',
-              marginTop: '58px',
             })}
           >
             <ImgLogo src={link}></ImgLogo>
