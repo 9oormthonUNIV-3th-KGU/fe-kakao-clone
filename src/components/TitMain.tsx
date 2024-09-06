@@ -23,7 +23,7 @@ const EmphTit = styled.h3`
   padding-left: 84px;
   width: 1212px;
   height: 66px;
-  font-size: 46px;
+  font-size: 53.81px;
   font-weight: 700;
   line-height: 66px;
   letter-spacing: -1px;
@@ -38,6 +38,7 @@ const TxtTit = styled.span`
   font-size: 36px;
   font-weight: 400;
   line-height: 36px;
+  letter-spacing: -1px;
   display: block;
 `
 
