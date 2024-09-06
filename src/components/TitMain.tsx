@@ -1,12 +1,18 @@
 import styled from '@emotion/styled'
 
-const Main = styled.div`
+interface TitMainProps {
+  emph: string
+  txt: string
+  url: string
+}
+
+const Main = styled.div<{ url: string }>`
   width: 1296px;
   height: 124px;
   font-family: KakaoBig, 'Apple SD Gothic Neo', 'Malgun Gothic', '맑은 고딕',
     sans-serif;
   padding-top: 96px;
-  background-image: url(//t1.kakaocdn.net/kakaocorp/kakaocorp/service/ico_tit_subsidiary.gif);
+  background-image: url(${(props) => props.url});
   background-repeat: no-repeat;
   background-position: 0px 94px;
   background-size: 72px 72px;
@@ -35,14 +41,9 @@ const TxtTit = styled.span`
   display: block;
 `
 
-interface TitMainProps {
-  emph: string
-  txt: string
-}
-
-function TitMain({ emph, txt }: TitMainProps) {
+function TitMain({ emph, txt, url }: TitMainProps) {
   return (
-    <Main>
+    <Main url={url}>
       <EmphTit>{emph}</EmphTit>
       <TxtTit>{txt}</TxtTit>
     </Main>
