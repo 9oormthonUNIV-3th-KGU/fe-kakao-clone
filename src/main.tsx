@@ -8,7 +8,15 @@ import SubsidiaryCompany from './pages/about/subsidiaryCompany.tsx'
 
 const router = createBrowserRouter([
   { path: '/', element: <Main /> },
-  { path: '/about/subsidiaryCompany', element: <SubsidiaryCompany /> },
+  {
+    path: '/about',
+    children: [
+      {
+        path: 'subsidiaryCompany',
+        element: <SubsidiaryCompany />,
+      },
+    ],
+  },
 ])
 
 createRoot(document.getElementById('root')!).render(

@@ -1,7 +1,7 @@
 import styled from '@emotion/styled'
 
-interface TitMainProps {
-  emph: string
+interface TitleMainProps {
+  emphasize: string
   txt: string
   url: string
 }
@@ -19,7 +19,7 @@ const Main = styled.div<{ url: string }>`
   margin: 0;
 `
 
-const EmphTit = styled.h3`
+const EmphasizeTitle = styled.h3`
   padding-left: 84px;
   width: 1212px;
   height: 66px;
@@ -31,7 +31,7 @@ const EmphTit = styled.h3`
   margin: 0;
 `
 
-const TxtTit = styled.span`
+const TxtTitle = styled.span`
   margin-top: 22px;
   width: 1296px;
   height: 36px;
@@ -42,13 +42,13 @@ const TxtTit = styled.span`
   display: block;
 `
 
-function TitMain({ emph, txt, url }: TitMainProps) {
+function TitleMain({ emphasize, txt, url }: TitleMainProps) {
   return (
     <Main url={url}>
-      <EmphTit>{emph}</EmphTit>
-      <TxtTit>{txt}</TxtTit>
+      <EmphasizeTitle>{emphasize}</EmphasizeTitle>
+      <TxtTitle>{txt}</TxtTitle>
     </Main>
   )
 }
 
-export default TitMain
+export default TitleMain

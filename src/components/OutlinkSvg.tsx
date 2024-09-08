@@ -8,9 +8,12 @@ const OutlinkCircle = styled.svg`
   width: 44px;
   height: 44px;
   box-sizing: border-box;
+  &:hover circle {
+    fill: #ddd;
+  }
 `
 
-function OutlinkBtn() {
+function OutlinkSvg() {
   return (
     <>
       <OutlinkCircle xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44">
@@ -24,7 +27,9 @@ function OutlinkBtn() {
               cx="22"
               cy="22"
               r="22"
-              css={css({ fill: 'rgb(238, 238, 238)' })}
+              css={css({
+                fill: '#eee',
+              })}
             />
             <g>
               <path d="M0 0H14V14H0z" transform="translate(15 15)" />
@@ -42,4 +47,4 @@ function OutlinkBtn() {
   )
 }
 
-export default OutlinkBtn
+export default OutlinkSvg

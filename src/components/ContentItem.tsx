@@ -1,22 +1,22 @@
 import styled from '@emotion/styled'
 import { css } from '@emotion/react'
-import OutlinkBtn from './OutlinkBtn'
+import OutlinkSvg from './OutlinkSvg'
 
-interface TitItemProps {
-  tit: string
+interface TitleItemProps {
+  title: string
   txt: string
-  desc: string
+  description: string
   img: string
   link: string
 }
 
-const Cont = styled.div`
+const Content = styled.div`
   padding-bottom: 196px;
   width: 612px;
   height: auto;
 `
 
-const TitItem = styled.strong`
+const TitleItem = styled.strong`
   padding-top: 36px;
   width: 612px;
   height: 40px;
@@ -41,7 +41,7 @@ const TxtItem = styled.span`
   display: block;
 `
 
-const DescItem = styled.p`
+const DescriptionItem = styled.p`
   margin-top: 24px;
   margin-bottom: 0px;
   width: 612px;
@@ -55,34 +55,37 @@ const DescItem = styled.p`
   display: block;
 `
 
-const WrapLogo = styled.a`
-  position: absolute;
-  bottom: 96px;
-  width: 612px;
-  height: 44px;
-  cursor: auto;
-  display: block;
-  font-family: KakaoSmall, 'Apple SD Gothic Neo', 'Malgun Gothic', '맑은 고딕',
-    sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  left: 0px;
-  line-height: 21px;
-`
-
 const ImgLogo = styled.img`
-  width: full;
+  width: auto;
   height: 44px;
 `
 
-function ContItem({ tit, txt, desc, img, link }: TitItemProps) {
+function ContentItem({ title, txt, description, img, link }: TitleItemProps) {
   return (
     <>
-      <Cont>
-        <TitItem>{tit}</TitItem>
+      <Content>
+        <TitleItem>{title}</TitleItem>
         <TxtItem dangerouslySetInnerHTML={{ __html: txt }} />
-        <DescItem dangerouslySetInnerHTML={{ __html: desc }} />
-        <WrapLogo href={img} target="_blank" rel="noopener noreferrer">
+        <DescriptionItem dangerouslySetInnerHTML={{ __html: description }} />
+        <a
+          css={css({
+            position: 'absolute',
+            bottom: '96px',
+            width: '612px',
+            height: '44px',
+            cursor: 'auto',
+            display: 'block',
+            fontFamily:
+              "'KakaoSmall', 'Apple SD Gothic Neo', 'Malgun Gothic', '맑은 고딕', 'sans-serif'",
+            fontSize: '14px',
+            fontWeight: '400',
+            left: '0px',
+            lineHeight: '21px',
+          })}
+          href={link}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <span
             css={css({
               position: 'relative',
@@ -92,13 +95,13 @@ function ContItem({ tit, txt, desc, img, link }: TitItemProps) {
               flexDirection: 'row',
             })}
           >
-            <ImgLogo src={link}></ImgLogo>
-            <OutlinkBtn></OutlinkBtn>
+            <ImgLogo src={img}></ImgLogo>
+            <OutlinkSvg></OutlinkSvg>
           </span>
-        </WrapLogo>
-      </Cont>
+        </a>
+      </Content>
     </>
   )
 }
 
-export default ContItem
+export default ContentItem

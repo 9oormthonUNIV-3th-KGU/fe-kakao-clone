@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 import { css } from '@emotion/react'
-import TitMain from '../../components/TitMain'
+import TitleMain from '../../components/TitleMain'
 import WrapCommunity from '../../components/WrapCommunity'
 
 const Main = styled.section`
@@ -42,11 +42,11 @@ function SubsidiaryCompany() {
       <Main>
         <MainContent>
           <ContentArticle>
-            <TitMain
-              emph="카카오 그룹"
+            <TitleMain
+              emphasize="카카오 그룹"
               txt="카카오가 만든 더 나은 세상"
               url="//t1.kakaocdn.net/kakaocorp/kakaocorp/service/ico_tit_subsidiary.gif"
-            ></TitMain>
+            />
             <SectionSubsidiary>
               <WrapCommunity
                 title="일상의 혁신을 위한 디지털 전환"
