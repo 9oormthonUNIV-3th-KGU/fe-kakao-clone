@@ -21,6 +21,7 @@ const Card = styled.div`
     맑은 고딕,
     sans-serif;
   box-shadow: 4px 12px 40px 6px rgba(0, 0, 0, 0.09);
+  margin-bottom: 30px;
 `
 
 const Title = styled.strong`
