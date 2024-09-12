@@ -38,6 +38,11 @@ const SubTitle = styled.span`
     margin-bottom: 18px;
 `;
 
+const TagContainer = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+`;
+
 const HashTag = styled.span`
     font-size: 13px;
     margin: 0px 3px 0px 0px;
@@ -79,7 +84,11 @@ function CardTitle() {
                     <Column>
                         <Title>{item.title}</Title>
                         <SubTitle>{item.subTitle}</SubTitle>
-                        <HashTag>{item.tags.join(' ')}</HashTag>
+                        <TagContainer>
+                            {item.tags.map((tag, index) => (
+                                <HashTag key={index}>{tag}</HashTag>
+                            ))}
+                        </TagContainer>
                     </Column>
                     <Image src={item.image} alt={`카드 이미지 ${index + 1}`} />
                 </Wrapper>
