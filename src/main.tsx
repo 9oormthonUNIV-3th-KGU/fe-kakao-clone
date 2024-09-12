@@ -5,6 +5,7 @@ import './index.css'
 
 import Main from './pages/main.tsx'
 import SubsidiaryCompany from './pages/about/SubsidiaryCompany.tsx'
+import Responsibility from './pages/Responsibility.tsx'
 
 const router = createBrowserRouter([
   { path: '/', element: <Main /> },
@@ -17,6 +18,7 @@ const router = createBrowserRouter([
       },
     ],
   },
+  { path: '/responsibility', element: <Responsibility /> },
 ])
 
 createRoot(document.getElementById('root')!).render(
