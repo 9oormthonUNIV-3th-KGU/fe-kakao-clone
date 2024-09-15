@@ -79,7 +79,7 @@ function SubsidiaryCompany() {
                 >
                   &lt;카카오 기업집단 설명서&gt;
                 </a>
-                를 참고해 주세요
+                를 참고해 주세요.
               </InfoCommunity>
             </SectionSubsidiary>
           </ContentArticle>
