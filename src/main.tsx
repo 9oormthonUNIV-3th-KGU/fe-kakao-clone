@@ -5,7 +5,7 @@ import './styles/index.css'
 
 import Main from './pages/main.tsx'
 import SubsidiaryCompany from './pages/about/SubsidiaryCompany.tsx'
-import Responsibility from './pages/Responsibility.tsx'
+import Responsibility from './pages/Resposibility.tsx'
 
 const router = createBrowserRouter([
   { path: '/', element: <Main /> },

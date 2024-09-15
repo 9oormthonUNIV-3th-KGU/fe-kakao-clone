@@ -1,5 +1,4 @@
 import styled from '@emotion/styled'
-import { FaPlus } from 'react-icons/fa6'
 
 interface Props {
   title: React.ReactNode
@@ -61,7 +60,7 @@ const Button = styled.button`
   cursor: pointer;
 `
 
-const PlusIcon = styled(FaPlus)`
+const PlusIcon = styled.svg`
   display: block;
   margin: 0 auto;
   width: 12px;
@@ -76,7 +75,23 @@ const HighlightCard = ({ title, description, image }: Props) => {
         <Description>{description}</Description>
         <Image src={image}></Image>
         <Button>
-          <PlusIcon />
+          <PlusIcon
+            data-v-75150fa2=""
+            data-v-58fb0f01=""
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 14 14"
+          >
+            <path
+              data-v-75150fa2=""
+              d="M6.222 0H7.7780000000000005V14H6.222z"
+              transform="translate(-1414 -643) translate(80 245) translate(1334 398)"
+            ></path>{' '}
+            <path
+              data-v-75150fa2=""
+              d="M6.222 0H7.7780000000000005V14H6.222z"
+              transform="translate(-1414 -643) translate(80 245) translate(1334 398) rotate(90 7 7)"
+            ></path>
+          </PlusIcon>
         </Button>
       </Card>
     </>
