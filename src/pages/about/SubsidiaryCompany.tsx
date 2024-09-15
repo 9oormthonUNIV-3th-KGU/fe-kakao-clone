@@ -1,7 +1,7 @@
 import styled from '@emotion/styled'
 import { css } from '@emotion/react'
-import TitleMain from '../../components/TitleMain'
-import WrapCommunity from '../../components/WrapCommunity'
+import TitleMain from '../../components/common/TitleMain'
+import WrapCommunity from '../../components/about/SubsidiaryCompany/WrapCommunity'
 
 const Main = styled.section`
   padding-top: 92px;
@@ -27,8 +27,6 @@ const InfoCommunity = styled.p`
   margin-top: 60px;
   width: 1296px;
   height: 31px;
-  font-family: KakaoSmall, 'Apple SD Gothic Neo', 'Malgun Gothic', '맑은 고딕',
-    sans-serif;
   font-size: 18px;
   font-weight: 400;
   height: 31px;

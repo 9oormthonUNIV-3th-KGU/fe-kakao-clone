@@ -20,8 +20,7 @@ const TitleItem = styled.strong`
   padding-top: 36px;
   width: 612px;
   height: 40px;
-  font-family: KakaoBig, 'Apple SD Gothic Neo', 'Malgun Gothic', '맑은 고딕',
-    sans-serif;
+  font-family: KakaoBig;
   font-size: 30px;
   font-weight: 700;
   height: 40px;
@@ -33,8 +32,7 @@ const TxtItem = styled.span`
   margin-top: 12px;
   width: 612px;
   height: auto;
-  font-family: KakaoBig, 'Apple SD Gothic Neo', 'Malgun Gothic', '맑은 고딕',
-    sans-serif;
+  font-family: KakaoBig;
   font-size: 30px;
   font-weight: 400;
   line-height: 40px;
@@ -47,8 +45,8 @@ const DescriptionItem = styled.p`
   width: 612px;
   height: auto;
   color: rgb(102, 102, 102);
-  font-family: KakaoSmall, 'Apple SD Gothic Neo', 'Malgun Gothic', '맑은 고딕',
-    sans-serif;
+  font-family: KakaoSmall;
+
   font-size: 16px;
   font-weight: 300;
   line-height: 28px;
@@ -75,8 +73,7 @@ function ContentItem({ title, txt, description, img, link }: TitleItemProps) {
             height: '44px',
             cursor: 'auto',
             display: 'block',
-            fontFamily:
-              "'KakaoSmall', 'Apple SD Gothic Neo', 'Malgun Gothic', '맑은 고딕', 'sans-serif'",
+            fontFamily: 'KakaoSmall',
             fontSize: '14px',
             fontWeight: '400',
             left: '0px',

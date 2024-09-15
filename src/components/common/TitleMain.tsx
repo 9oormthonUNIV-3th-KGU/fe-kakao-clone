@@ -9,8 +9,7 @@ interface TitleMainProps {
 const Main = styled.div<{ url: string }>`
   width: 1296px;
   height: 124px;
-  font-family: KakaoBig, 'Apple SD Gothic Neo', 'Malgun Gothic', '맑은 고딕',
-    sans-serif;
+  font-family: KakaoBig;
   padding-top: 96px;
   background-image: url(${(props) => props.url});
   background-repeat: no-repeat;
