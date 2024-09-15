@@ -4,7 +4,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import './index.css'
 
 import Main from './pages/main.tsx'
-import SubsidiaryCompany from './pages/about/subsidiaryCompany.tsx'
+import SubsidiaryCompany from './pages/about/SubsidiaryCompany.tsx'
 
 const router = createBrowserRouter([
   { path: '/', element: <Main /> },
