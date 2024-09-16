@@ -42,6 +42,7 @@ const Title = styled.strong`
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    font-family: KakaoBig;
 `;
 
 const SubTitle = styled.span`
@@ -49,6 +50,7 @@ const SubTitle = styled.span`
     font-weight: bold;
     margin-top: 13px;
     margin-bottom: 18px;
+    font-family: KakaoSmall;
 `;
 
 const TagContainer = styled.div`
@@ -60,6 +62,7 @@ const HashTag = styled.span`
     font-size: 13px;
     margin: 0px 3px 0px 0px;
     margin-top: 15px;
+    font-family: KakaoSmall;
 `;
 
 const Image = styled.img`

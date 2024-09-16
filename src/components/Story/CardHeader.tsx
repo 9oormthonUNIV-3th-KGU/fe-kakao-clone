@@ -35,6 +35,7 @@ const CategoryStyle = css`
     line-height: 34px;
     background-color: #EEEEEE;
     vertical-align: top;
+    font-family: KakaoBig;
 
     &::before {
         content: '';
@@ -56,6 +57,7 @@ const Category = styled.div`
 const Date = styled.span`
     color: #666666;
     font-size: 12px;
+    font-family: KakaoSmall;
 `;
 
 const ShareMenu = styled.svg`
