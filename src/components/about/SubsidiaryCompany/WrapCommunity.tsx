@@ -24,8 +24,7 @@ const Title = styled.h4`
   margin: 0;
   width: 1296px;
   height: 61px;
-  font-family: KakaoSmall, 'Apple SD Gothic Neo', 'Malgun Gothic', '맑은 고딕',
-    sans-serif;
+  font-family: KakaoSmall;
   font-size: 42px;
   font-weight: 700;
   line-height: 61px;
@@ -36,8 +35,8 @@ const Sub = styled.span`
   width: 1296px;
   height: 100%;
   color: rgb(102, 102, 102);
-  font-family: KakaoSmall, 'Apple SD Gothic Neo', 'Malgun Gothic', '맑은 고딕',
-    sans-serif;
+  font-family: KakaoSmall;
+
   font-size: 22px;
   font-weight: 400;
   line-height: 35px;
@@ -55,6 +54,7 @@ const List = styled.ul`
   overflow: hidden;
   grid-template-columns: repeat(2, 612px);
   grid-gap: 0 72px;
+  font-family: KakaoSmall;
 `
 
 const Li = styled.li`
@@ -187,23 +187,25 @@ const contents: Record<string, ContentItem[]> = {
 
 function WrapCommunity({ title, sub, marginTop }: WrapCommunityProps) {
   return (
-    <Wrap marginTop={marginTop}>
-      <Title>{title}</Title>
-      <Sub dangerouslySetInnerHTML={{ __html: sub || '' }} />
-      <List>
-        {contents[title]?.map(({ title, txt, description, img, link }) => (
-          <Li key={title}>
-            <ContentItem
-              title={title}
-              txt={txt}
-              description={description}
-              img={img}
-              link={link}
-            />
-          </Li>
-        ))}
-      </List>
-    </Wrap>
+    <>
+      <Wrap marginTop={marginTop}>
+        <Title>{title}</Title>
+        <Sub dangerouslySetInnerHTML={{ __html: sub || '' }} />
+        <List>
+          {contents[title]?.map(({ title, txt, description, img, link }) => (
+            <Li key={title}>
+              <ContentItem
+                title={title}
+                txt={txt}
+                description={description}
+                img={img}
+                link={link}
+              />
+            </Li>
+          ))}
+        </List>
+      </Wrap>
+    </>
   )
 }
 
