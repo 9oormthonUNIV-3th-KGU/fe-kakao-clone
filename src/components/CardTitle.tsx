@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import CardHeader from "./card-header";
+import CardHeader from "./CardHeader";
 
 const Wrapper = styled.div`
     width: 365px;
