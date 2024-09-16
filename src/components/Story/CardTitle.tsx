@@ -1,6 +1,18 @@
 import styled from "@emotion/styled";
 import CardHeader from "./CardHeader";
 
+interface CardTitleProps {
+    data: {
+        icon: string;
+        category: string;
+        date: string;
+        title: string;
+        subTitle: string;
+        tags: string[];
+        image: string;
+    }[];
+}
+
 const Wrapper = styled.div`
     width: 365px;
     height: 435px;
@@ -10,6 +22,7 @@ const Wrapper = styled.div`
     background-color: var(--colorBg10);
     box-shadow: 4px 12px 30px 6px rgba(0, 0, 0, .09);
     transition: transform 0.3s ease;
+    margin-bottom: 36px;
 
     &:hover {
         transform: translateY(-5px);
@@ -58,20 +71,7 @@ const Image = styled.img`
     left: 0;
 `;
 
-const data = [
-    {
-        "icon": "https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/category/dd2b88f5018800001.png?type=thumb&opt=C72x72.fwebp",
-        "category": "임팩트",
-        "date": "2024.08.29",
-        "title": "[주니어랩] 카카오모빌리티의 작은 연구실, 주니어랩",
-        "subTitle": "카카오모빌리티",
-        "tags": ["#임팩트", "#주니어랩", "#카카오모빌리티"],
-        "image": "https://t1.kakaocdn.net/thumb/C630x354.fwebp.q100/?fname=https%3A%2F%2Ft1.kakaocdn.net%2Fkakaocorp%2Fkakaocorp%2Fadmin%2Farchives%2Fb03fc30c019100001.jpg"
-    },
-];
-  
-
-function CardTitle() {
+const CardTitle: React.FC<CardTitleProps> = ({data}) => {
     return (
         <>
             {data.map((item, index) => (
