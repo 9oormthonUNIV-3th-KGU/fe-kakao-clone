@@ -4,6 +4,7 @@ import { useState } from 'react'
 import TitleMain from '../../components/common/TitleMain'
 import ShareBtn from '../../components/about/Milestones/ShareBtn'
 import OptionList from '../../components/about/Milestones/OptionList'
+import ListMilestonesLi from '../../components/about/Milestones/ListMilestonesLi'
 
 interface ShareContentsProps {
   ariaLabel: string
@@ -32,7 +33,7 @@ const TitleSection = styled.h4`
   font-weight: 700;
   width: auto;
   height: 40px;
-  margin: 0px;
+  margin-top: 100px;
   line-height: 40px;
 `
 
@@ -46,7 +47,7 @@ const WrapShare = styled.div`
 
 const OptionComment = styled.div<{ view: boolean }>`
   position: relative;
-  margin-top: 44px;
+  margin-top: 144px;
   width: 167px;
   height: 44px;
 
@@ -130,6 +131,10 @@ const OptionUl = styled.ul<{ view: boolean }>`
     background-clip: padding-box;
     border: 12px solid transparent;
   }
+`
+
+const ListMilestones = styled.ul`
+  margin-top: 32px;
 `
 
 const ShareContents: ShareContentsProps[] = [
@@ -218,6 +223,9 @@ function Milestones() {
           <OptionList />
         </OptionUl>
       </OptionComment>
+      <ListMilestones>
+        <ListMilestonesLi />
+      </ListMilestones>
     </>
   )
 }
