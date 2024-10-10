@@ -1,10 +1,14 @@
 import styled from "@emotion/styled";
 import { css } from "@emotion/react";
+import ShareMenuIcon from "../../assets/icons/ShareMenuIcon";
 
 interface CardHeaderProps {
-    icon: string,
-    category: string,
-    date: string;
+    icon: string
+    category: string
+    date: string
+    title: string
+    subTitle: string
+    tags: string[]
 }
 
 const Row = styled.div`
@@ -67,20 +71,63 @@ const ShareMenu = styled.svg`
     margin: 0px 2px;
 `;
 
-function CardHeader({ icon, category, date }: CardHeaderProps) {
+
+const Column = styled.div`
+    display: flex;
+    flex-direction: column;
+`;
+
+const Title = styled.strong`
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 13px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-family: KakaoBig;
+`;
+
+const SubTitle = styled.span`
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 13px;
+    margin-bottom: 18px;
+    font-family: KakaoSmall;
+`;
+
+const TagContainer = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+`;
+
+const HashTag = styled.span`
+    font-size: 13px;
+    margin: 0px 3px 0px 0px;
+    margin-top: 15px;
+    font-family: KakaoSmall;
+`;
+
+function CardHeader({ icon, category, date, title, subTitle, tags }: CardHeaderProps) {
     return (
-        <Row>
-            <LeftGroup>
-                <ImgIcon src={icon} alt="icon" />
-                <Category>{category}</Category>
-                <Date>{date}</Date>
-            </LeftGroup>
-            <ShareMenu viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="2" cy="2" r="2" />
-                <circle cx="2" cy="10" r="2" />
-                <circle cx="2" cy="18" r="2" />
-            </ShareMenu>
-        </Row>
+        <div>
+            <Row>
+                <LeftGroup>
+                    <ImgIcon src={icon} alt="icon" />
+                    <Category>{category}</Category>
+                    <Date>{date}</Date>
+                </LeftGroup>
+                <ShareMenuIcon />
+            </Row>
+            <Column>
+                <Title>{title}</Title>
+                <SubTitle>{subTitle}</SubTitle>
+                <TagContainer>
+                    {tags.map((tag, index) => (
+                        <HashTag key={index}>{tag}</HashTag>
+                    ))}
+                </TagContainer>
+            </Column>
+        </div>
     );
 }
 

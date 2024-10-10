@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import CardTitle from "../components/Story/CardTitle";
+import StoryCard from "../components/Story/StroyCard";
 
 const ArchivesContents = styled.ul`
     width: 1332px;
@@ -148,7 +148,7 @@ function Archives() {
                 <Row key={rowIndex}>
                     {row.map((item, index) => (
                         <Content key={index}>
-                            <CardTitle data={[item]} />
+                            <StoryCard data={[item]} />
                         </Content>
                     ))}
                 </Row>
