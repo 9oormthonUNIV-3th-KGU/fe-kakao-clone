@@ -11,7 +11,7 @@ interface ShareBtnProps {
   marginLeft?: string
 }
 
-const Share = styled.button<{ marginLeft?: string }>`
+const Share = styled.button<{ ariaLabel?: string; marginLeft?: string }>`
   align-items: flex-start;
   appearance: auto;
   background-color: transparent;
@@ -21,10 +21,15 @@ const Share = styled.button<{ marginLeft?: string }>`
   cursor: pointer;
 
   &:hover circle {
-    fill: #000;
+    fill: #333;
   }
 
-  &:hover path.icon {
+  &:hover path.icon1 {
+    ${({ ariaLabel }) => (ariaLabel === '링크 복사하기' ? 'stroke:#eee' : '')}
+  }
+
+  &:hover path.icon2 {
+    ${({ ariaLabel }) => (ariaLabel === '링크 복사하기' ? 'stroke:#eee' : '')}
     fill: #eee;
     stroke: #eee;
   }
@@ -54,13 +59,14 @@ function ShareBtn({
   marginLeft,
 }: ShareBtnProps) {
   return (
-    <Share aria-label={ariaLabel} data-url={dataUrl} marginLeft={marginLeft}>
+    <Share ariaLabel={ariaLabel} data-url={dataUrl} marginLeft={marginLeft}>
       <ShareSvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36">
         <g css={css({ fill: 'none', fillRule: 'evenodd' })}>
           <g transform={`translate(-639 -362) translate(639 362)`}>
             <ShareCircle />
             <g css={css({ width: 'auto', height: 'auto', display: 'inline' })}>
               <path
+                className="icon1"
                 d={linkIconPath || 'M0 0H18V18H0z'}
                 transform={`translate(9 9) ${translate || ''}`}
                 css={css({
@@ -68,7 +74,7 @@ function ShareBtn({
                 })}
               />
               <path
-                className="icon"
+                className="icon2"
                 d={path}
                 transform={`translate(9 9) ${translate || ''}`}
                 css={css({
